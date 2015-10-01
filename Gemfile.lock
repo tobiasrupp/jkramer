@@ -9,6 +9,16 @@ GIT
       refinerycms-pages (~> 3.0.0)
 
 GIT
+  remote: https://github.com/bisscomm/refinerycms-image-slideshows
+  revision: a92b47ae9be651a37bd8598b610bfdf1bb75610c
+  branch: master
+  specs:
+    refinerycms-image_slideshows (3.0.0)
+      globalize (~> 5.0)
+      refinerycms-core (~> 3.0.0)
+      refinerycms-images (~> 3.0.0)
+
+GIT
   remote: https://github.com/refinery/refinerycms
   revision: 39768eb0534a094652aba68f9519e7aa9d50d4fc
   branch: master
@@ -304,6 +314,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-blog!
+  refinerycms-image_slideshows!
   refinerycms-inquiries!
   refinerycms-page-images!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)

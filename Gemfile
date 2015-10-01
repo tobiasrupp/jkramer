@@ -71,7 +71,7 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 
 gem 'refinerycms-inquiries', git: 'https://github.com/refinery/refinerycms-inquiries', branch: 'master'
 
-# gem 'refinerycms-image_slideshows', git: 'https://github.com/bisscomm/refinerycms-image-slideshows', branch: 'master'
+gem 'refinerycms-image_slideshows', git: 'https://github.com/bisscomm/refinerycms-image-slideshows', branch: 'master'
 
  # gem 'refinerycms-search', github: "refinery/refinerycms-search", branch: "master"
  gem "refinerycms-page-images", github: "refinery/refinerycms-page-images", branch: "master"
