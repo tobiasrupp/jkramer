@@ -1,11 +1,16 @@
 source 'https://rubygems.org'
-
+ruby '2.0.0'
+#ruby-gemset=jkramer
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
+
 group :development, :test do
   gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -33,6 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,3 +66,12 @@ gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 
 # The default authentication adapter
 gem 'refinerycms-authentication-devise', '~> 1.0'
+
+gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
+
+gem 'refinerycms-inquiries', git: 'https://github.com/refinery/refinerycms-inquiries', branch: 'master'
+
+# gem 'refinerycms-image_slideshows', git: 'https://github.com/bisscomm/refinerycms-image-slideshows', branch: 'master'
+
+ # gem 'refinerycms-search', github: "refinery/refinerycms-search", branch: "master"
+ gem "refinerycms-page-images", github: "refinery/refinerycms-page-images", branch: "master"

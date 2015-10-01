@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/refinery/refinerycms-page-images.git
+  revision: 9b5f16e8266cb3c823c4d310ec3e733245258dde
+  branch: master
+  specs:
+    refinerycms-page-images (3.0.0)
+      decorators (~> 2.0.0)
+      globalize (~> 5.0)
+      refinerycms-pages (~> 3.0.0)
+
+GIT
   remote: https://github.com/refinery/refinerycms
   revision: 39768eb0534a094652aba68f9519e7aa9d50d4fc
   branch: master
@@ -40,6 +50,32 @@ GIT
       globalize (>= 4.0.0, < 5.2)
       refinerycms-core (= 3.0.0)
 
+GIT
+  remote: https://github.com/refinery/refinerycms-blog
+  revision: 5ee833618c3f365b50742df2b6ca4f591b52a467
+  branch: master
+  specs:
+    refinerycms-blog (3.0.0)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      friendly_id (~> 5.1.0)
+      globalize (>= 4.0.0, < 5.2)
+      jquery-ui-rails (~> 5.0.0)
+      rails_autolink (~> 1.1.3)
+      refinerycms-core (~> 3.0.0)
+      refinerycms-settings (~> 3.0.0)
+      seo_meta (~> 2.0.0.rc.1)
+
+GIT
+  remote: https://github.com/refinery/refinerycms-inquiries
+  revision: 192b4a91f4a0a5c7a8b60431f757aa8cfa8230ed
+  branch: master
+  specs:
+    refinerycms-inquiries (3.0.0)
+      filters_spam (~> 0.2)
+      refinerycms-core (~> 3.0.0)
+      refinerycms-settings (~> 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -78,6 +114,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
     acts_as_indexed (0.8.3)
     addressable (2.3.8)
     arel (6.0.3)
@@ -112,6 +150,7 @@ GEM
       rack (>= 1.3.0)
     erubis (2.7.0)
     execjs (2.6.0)
+    filters_spam (0.5)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.3.6)
@@ -141,6 +180,7 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
+    pg (0.18.3)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -168,6 +208,13 @@ GEM
     rails-i18n (4.0.5)
       i18n (~> 0.6)
       railties (~> 4.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_autolink (1.1.6)
+      rails (> 3.1)
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.4)
     railties (4.2.4)
       actionpack (= 4.2.4)
       activesupport (= 4.2.4)
@@ -188,6 +235,9 @@ GEM
     refinerycms-i18n (3.0.1)
       rails-i18n (~> 4.0.1)
       routing-filter (>= 0.4.0)
+    refinerycms-settings (3.0.0)
+      friendly_id (~> 5.0, >= 5.0.1)
+      refinerycms-core (~> 3.0, >= 3.0.0)
     refinerycms-wymeditor (1.0.6)
       refinerycms-core (~> 3.0, >= 3.0.0)
     responders (2.1.0)
@@ -246,11 +296,16 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   quiet_assets
   rails (= 4.2.4)
+  rails_12factor
   refinerycms!
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
   refinerycms-authentication-devise (~> 1.0)
+  refinerycms-blog!
+  refinerycms-inquiries!
+  refinerycms-page-images!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
