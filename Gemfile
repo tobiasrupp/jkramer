@@ -74,4 +74,6 @@ gem 'refinerycms-inquiries', git: 'https://github.com/refinery/refinerycms-inqui
 gem 'refinerycms-image_slideshows', git: 'https://github.com/bisscomm/refinerycms-image-slideshows', branch: 'master'
 
  # gem 'refinerycms-search', github: "refinery/refinerycms-search", branch: "master"
- gem "refinerycms-page-images", github: "refinery/refinerycms-page-images", branch: "master"
+gem "refinerycms-page-images", github: "refinery/refinerycms-page-images", branch: "master"
+
+gem 'foundation-rails', '5.5.2.1'
