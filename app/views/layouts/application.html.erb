@@ -14,12 +14,12 @@
           
 
           <nav class="top-bar" data-topbar role="navigation">
-            
+           
             <!--    Start Logo    -->
             <ul class="title-area">
               <li class="name">
                 <a href="#" class="logo">
-                  <h1>volcano<span class="tld">.com</span></h1>
+                  <h1>German-Masterclasses<span class="tld">.com</span></h1>
                 </a>
               </li>
                 <span class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></span>
@@ -29,12 +29,7 @@
 
             <!--    Start Navigation Menu    -->
             <section class="top-bar-section" id="mean_nav">
-              <ul class="right">
-                <li><a href="#services">services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#Download">Download</a></li>
-                <li><a href="#connect">Connect</a></li>
-              </ul>
+             <%= zurb_menu(refinery_menu_pages, list_tag_css: 'right').to_html %>
             </section>
             <!--    End Navigation Menu    -->
 
@@ -42,18 +37,9 @@
         </div>
       </header>
 
-      <!--    Start Hero Caption    -->
-      <section class="caption">
-        <div class="row">
-          <h1 class="mean_cap">Responsive Template</hA>
-          <h2 class="sub_cap">Less Is More.</h2>
-          <a href="#" class="btn_details"><span>More Details</span> <img src="/assets/volcano/btn_arrow.png" alt="" src="" class="arrow"></a>
-        </div>
-      </section>
-      <!--    End Hero Caption    -->
+    <%= yield %>
 
-    </section>
-    <!--  End Hero Section  -->
+      
 
 
 
