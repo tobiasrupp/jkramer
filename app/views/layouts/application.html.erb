@@ -7,19 +7,6 @@
   </head>
   <body>
      <%= site_bar -%>  
-      <% main_slideshow = Refinery::ImageSlideshows::ImageSlideshow.find_by_title('Your Awesome Slideshow Title') %>
-    <div id="wrapper">
-      <div class="slider-wrapper">
-        <div id="slider">
-          <% main_slideshow.image_slides.each do |image_slide| %>
-            <%= link_to image_slide.link_url do %>
-              <%= image_tag image_slide.image.url, :alt => image_slide.title, :title => image_slide.caption %>
-            <% end %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
     <!--  Start Hero Section  -->
     <section class="hero">
       <header>
@@ -50,7 +37,145 @@
         </div>
       </header>
 
-    <%= yield %>      
+    <%= yield %>
+
+      
+
+
+
+    <!--  Start Services Section  -->
+    <section class="services" id="services">     
+
+      <!--    Start Services Titles    -->
+      <div class="row">        
+        <h1 class="mean_title">velit esse cillum dolore eu fugiat nulla</h1>
+        <h2 class="sub_title">sunt culpa officia deserunt mollit anim id est laborum.</h2> 
+      </div>
+      <!--    End Services Titles    -->
+
+      <!--    Start Services List    -->
+      <div class="row services_list">
+        <div class="small-12 medium-3 large-3 columns">
+          <img src="/assets/volcano/icon2.png" alt="" title="" class="serv_icon"/>
+          <h2 class="title">Plan & Strategy</h2>
+          <p>Ruis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+
+        <div class="small-12 medium-3 large-3 columns">
+          <img src="/assets/volcano/icon1.png" alt="" title="" class="serv_icon"/>
+          <h2 class="title">UI/UX Design</h2>
+          <p>Ruis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+
+        <div class="small-12 medium-3 large-3 columns">
+          <img src="/assets/volcano/icon3.png" alt="" title="" class="serv_icon"/>
+          <h2 class="title">Test The App</h2>
+          <p>Ruis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+
+        <div class="small-12 medium-3 large-3 columns">
+          <img src="/assets/volcano/icon4.png" alt="" title="" class="serv_icon"/>
+          <h2 class="title">Launch The App</h2>
+          <p>Ruis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <!--    End Services List    -->
+
+      <!--    Start Button    -->
+      <div class="btn_holder">
+        <a href="#" class="btn_fancy">
+          <div class="solid_layer"></div>
+          <div class="border_layer"></div>
+          <div class="text_layer">Get In Touch</div>
+        </a>
+      </div>
+      <!--    End Button    -->
+
+    </section>
+    <!--  End Services Section  -->
+
+
+
+    <!--  Start Quote Section  -->
+    <section class="quote">
+        <blockquote>
+          <p>Mauris semper <span class="strong">lacus nunc</span> ultrices imperdiet. </p>
+          <hr/>
+          <span class="author">john doe</span>
+        </blockquote>
+    </section>
+    <!--  End Quote Section  -->
+
+
+
+    <!--  Start Testimonials Section  -->
+    <section class="testimonials" id="testimonials">
+      <div class="row">
+        <div class="slider_container">
+          <div id="carousel">
+            
+            <div class="tesimonial">
+              <img src="/assets/volcano/mashable.jpg" title="" alt="">
+              <span class="name">Mashable</span>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <span class="author">Alex Martin - CEO</span>
+            </div>
+
+            <div class="tesimonial">
+              <img src="/assets/volcano/mashable.jpg" title="" alt="">
+              <span class="name">Mashable_2</span>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <span class="author">Alex Martin - CEO</span>
+            </div>
+
+            <div class="tesimonial">
+              <img src="/assets/volcano/mashable.jpg" title="" alt="">
+              <span class="name">Mashable_3</span>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <span class="author">Alex Martin - CEO</span>
+            </div>
+
+          </div>          
+        </div>
+
+        <!--    Start Testimonials Pagination    -->
+        <nav class="pagination">
+          <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#" class="selected">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </nav>
+        <!--    End Testimonials Pagination    -->
+
+      </div>
+    </section>
+    <!--  End Testimonials Section  -->
+
+
+
+    <!--  Start Call To Action Section  -->
+    <section class="cta" id="Download">
+      <div class="row">
+
+        <!--    Start CTA Titles    -->
+        <h1 class="title">Volcano Free Responsive Zurb Foundation Template.</h1>
+        <h2 class="sub_title">Crafted With Care & attention to details by pixelhint.com</h2>
+        <!--    End CTA Titles    -->
+
+        <!--    Start Button    -->
+        <a href="#" class="btn_fancy">
+          <div class="solid_layer"></div>
+          <div class="border_layer"></div>
+          <div class="text_layer">Get It Now!</div>
+        </a>
+        <!--    End Button    -->
+
+      </div>
+    </section>
+    <!--  End Call To Action Section  -->
+
+
 
     <!--  Start Map Section  -->
     <section class="map" id="connect">
@@ -134,13 +259,5 @@
     <script type="text/javascript" src="/assets/volcano/scrollTo.js"></script>
     <script type="text/javascript" src="/assets/volcano/map.js"></script>
     <script type="text/javascript" src="/assets/volcano/main.js"></script>
-
-    <script type="text/javascript">
-      $(window).load(function() {
-          $('#slider').nivoSlider({
-            <%= raw main_slideshow.js_config %>
-          });
-      });
-    </script>
   </body>
 </html>
