@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 
 	/*    Mean navigation menu scroll to    */
-    $('#mean_nav ul li a').click(function(e){
+    $('.mean_nav a').click(function(e){
     	e.preventDefault();
     	scrollTo($(this).attr('href'), 900, 'easeInOutCubic');
     });
@@ -64,16 +64,18 @@ $(document).ready(function(){
 
 
 
-    // vegas
+    // // vegas
 
-    $.vegas('slideshow', {
-      delay:7000,
-      backgrounds:[
-        { src:'https://suedbayerische-immobilien.de/sites/default/files/Sehenswuerdigkeiten-Muenchen/Schloss-Neuschwanstein-Bayern/Schloss-Neuschwanstein.jpg', fade:1500 },   
-        { src:'http://philpriston.com/wp-content/uploads/2015/01/DSC02022.jpg', fade:1500 },
-         { src:'http://wallpaper.pickywallpapers.com/1920x1080/london-parliament.jpg', fade:1500 },   
-         { src:'http://hdwallpaperia.com/wp-content/uploads/2014/01/London-Wallpaper-HD-Cityscape-Image.jpg', fade:1500 }
-      ]
-    });
+    // $.vegas('slideshow', {
+    //   delay:7000,
+    //   backgrounds:[
+    //     { src:'https://suedbayerische-immobilien.de/sites/default/files/Sehenswuerdigkeiten-Muenchen/Schloss-Neuschwanstein-Bayern/Schloss-Neuschwanstein.jpg', fade:1500 },   
+    //     { src:'http://philpriston.com/wp-content/uploads/2015/01/DSC02022.jpg', fade:1500 },
+    //      { src:'http://wallpaper.pickywallpapers.com/1920x1080/london-parliament.jpg', fade:1500 },   
+    //      { src:'http://hdwallpaperia.com/wp-content/uploads/2014/01/London-Wallpaper-HD-Cityscape-Image.jpg', fade:1500 }
+    //   ]
+    // })('overlay', {
+    //   src:'http://templateocean.com/wrapbootstrap/zerif-html/v1.3.1/images/overlays/06.png'
+    // });
 
 });
