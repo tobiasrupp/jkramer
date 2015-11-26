@@ -2,3 +2,10 @@ $primary-color: lighten(gray, 40%) !default;
 .bg-1 {
   background-color: $primary-color;
 }
+.title-area {
+  margin-top: -7px;
+}
+.top-bar {
+  position: fixed !important;
+  top: 0;
+}
