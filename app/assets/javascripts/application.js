@@ -10,8 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= vegas
-//= require turbolinks
-//= require_tree .
+//= require zerif/bootstrap.min.js
+//= require zerif/wow.min.js
+//= require zerif/jquery.nav.js
+//= require zerif/jquery.knob.js
+//= require zerif/owl.carousel.min.js
+//= require zerif/smoothscroll.js
+//= require zerif/jquery.vegas.min.js
+//= require zerif/zerif.js

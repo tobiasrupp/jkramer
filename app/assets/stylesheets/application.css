@@ -15,8 +15,5 @@
  *= require refinery/theme
  *= require_self
  
- *= require foundation_and_overrides
- *= require volcano-main
- *= require vegas.min
  *= require custom
  */
