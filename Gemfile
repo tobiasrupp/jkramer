@@ -56,7 +56,7 @@ end
 
 gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
 
-gem 'quiet_assets', group: :development
+# gem 'quiet_assets', group: :development
 
 # Add support for searching inside Refinery's admin interface.
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
