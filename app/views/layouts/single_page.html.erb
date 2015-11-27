@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+
+<% site_bar = render('/refinery/site_bar', :head => true) -%>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <%= render "/refinery/head" %>
+    <%= csrf_meta_tag %>
+    <% fb_properties = "<meta property=\"og:title\" content=\"#{content_for?(:title) ? yield(:title) : "German Masterclasses"}\"/>" + "\n<meta property=\"og:type\" content=\"website\"/>" + "\n<meta property=\"og:url\" content=\"#{request.protocol + request.host_with_port + request.fullpath}\"/>" + "\n<meta property=\"og:image\" content=\"#{asset_url('...')}\"/>" + "\n<meta property=\"og:site_name\" content=\"German Masterclasses\"/>" + "\n<meta property=\"fb:admins\" content=\"100004335090083\"/>" + "\n<meta property=\"og:description\" content=\"...\"/>" %>
+    <% provide(:fb_properties, raw(fb_properties)) %>
+    <%= yield(:fb_properties) %>
+    <title><%= content_for?(:title) ? yield(:title) : "German Masterclasses" %></title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+<!-- =========================
+ FAV AND TOUCH ICONS  
+============================== -->
+<link rel="shortcut icon" href="/assets/zerif/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/zerif/icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/zerif/icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/zerif/icons/apple-touch-icon-114x114.png">
+
+<!-- =========================
+     STYLESHEETS      
+============================== -->
+<link rel="stylesheet" href="/assets/zerif/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/zerif/owl.theme.css">
+<link rel="stylesheet" href="/assets/zerif/owl.carousel.css">
+<link rel="stylesheet" href="/assets/zerif/jquery.vegas.min.css">
+<link rel="stylesheet" href="/assets/zerif/animate.min.css">
+
+<link rel="stylesheet" href="/assets/zerif/icon-fonts/styles.css"> 
+<link rel="stylesheet" href="/assets/zerif/pixeden-icons.css"> 
+
+<!-- CUSTOM STYLES -->
+<link rel="stylesheet" href="/assets/zerif/styles.css">
+<link rel="stylesheet" href="/assets/zerif/responsive.css">
+
+<!-- WEBFONT -->
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic|Montserrat:700,400|Homemade+Apple' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+<!-- JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+<!-- =========================
+   PRE LOADER       
+============================== -->
+<div class="preloader">
+  <div class="status">&nbsp;</div>
+</div>
+
+
+  
+  <%= render 'shared/navbar' %>
+  
+  <% flash.each do |key, value| %>
+    <% case key %>
+      <% when :notice %>
+        <div class="alert alert-success"><strong><%= value %></strong></div>
+      <% else %>
+        <div class="alert alert-danger"><strong><%= value %></strong></div>
+    <% end %>
+  <% end %>
+
+<!-- =========================
+   ABOUT US SECTION   
+============================== -->
+
+<section class="about-us" id="aboutus">
+<div class="container">
+  
+  <!-- SECTION HEADER -->
+  <div class="section-header">
+    
+    <!-- SECTION TITLE -->
+    <h2 class="white-text">About Me</h2>
+    
+    <!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+    <h6 class="white-text">
+        We design &amp; develop qaulity products to help small &amp; medium level business.
+    </h6>
+  </div>
+  <!-- / END SECTION HEADER -->
+  
+  <!-- 3 COLUMNS OF ABOUT US-->
+  <div class="row">
+    
+    <!-- COLUMN 1 - BIG MESSAGE ABOUT THE COMPANY-->
+    <div class="col-lg-3 col-md-3 column">
+      <div class="big-intro wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+         Teaching German with Passion since 2002.
+      </div>
+    </div>
+    
+    <!-- COLUMN 2 - BRIEF ABOUT THE COMPANY-->
+    <div class="col-lg-6 col-md-6 column">
+      <p class="wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+         <%= raw(@page.content_for(:body)) %>
+      </p>
+    </div>
+    
+    <!-- COLUMN 1 - SKILSS-->
+    <div class="col-lg-3 col-md-3 column">
+      <ul class="skills wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+        
+        <!-- SKILL ONE -->
+        <li class="skill">
+          <div class="skill-count">
+            <input type="text" value="86" data-thickness=".2" class="skill1">
+          </div>
+          <h6>Web Design</h6>
+          <p>
+            We are expert on HTML development. Clean, semantic and valid HTML codes.
+          </p>
+        </li>
+        
+        <!-- SKILL TWO -->
+        <li class="skill">
+          <div class="skill-count">
+            <input type="text" value="80" data-thickness=".2" class="skill2">
+          </div>
+          <h6>development</h6>
+          <p>
+            We are expert on HTML development. Clean, semantic and valid HTML codes.
+          </p>
+        </li>
+        
+        <!-- SKILL THREE -->
+        <li class="skill">
+          <div class="skill-count">
+            <input type="text" value="89" data-thickness=".2" class="skill3">
+          </div>
+          <h6>photography</h6>
+          <p>
+            We are expert on HTML development. Clean, semantic and valid HTML codes.
+          </p>
+        </li>
+        
+        <!-- SKILL FOUR -->
+        <li class="skill">
+          <div class="skill-count">
+            <input type="text" value="95" data-thickness=".2" class="skill4">
+          </div>
+          <h6>SEO</h6>
+          <p>
+            We are expert on HTML development. Clean, semantic and valid HTML codes.
+          </p>
+        </li>
+        
+      </ul> 
+    </div> <!-- / END SKILLS COLUMN-->
+  </div> <!-- / END 3 COLUMNS OF ABOUT US-->
+
+</div> <!-- / END CONTAINER -->
+
+</section> <!-- END ABOUT US SECTION -->
+
+<!-- =========================
+   NEWSETTER          
+============================== -->
+
+<section class="newsletter">
+<div class="container">
+ 
+
+  
+</div> <!-- / END CONTAINER -->
+</section> <!-- / END NEWSLETTER SECTION -->
+
+<!-- =========================
+   FOOTER             
+============================== -->
+
+<footer>
+
+   <div class="container">
+        <div class="row">
+           
+          <div class="col-md-4">
+            
+                 
+          </div>
+           <div class="col-md-4">         
+           
+         <!--    <%= link_to 'Newsletter', '#' %> </br> 
+            <%= link_to 'Terms', '#' %></br>
+            <%= link_to 'Privacy', '#' %> -->
+          </div>
+          <div class="col-md-4">
+  <!--         </br> -->
+            <p>&copy;<%= Time.now.year %> German Masterclasses</p>
+          </div>
+        </div>
+      </div>
+  <!-- SOCIAL ICON AND COPYRIGHT -->
+  
+</footer> <!-- / END FOOOTER  -->
+
+<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+<script type="text/javascript">
+    $(window).load(function() {
+      $.vegas('slideshow', {
+        delay:7000,
+        backgrounds:[
+          <% main_slideshow = Refinery::ImageSlideshows::ImageSlideshow.last %>
+          <% main_slideshow.image_slides.each do |image_slide| %>
+           { src:'<%= image_slide.image.url %>', fade:1500 },             
+          <% end %>
+        ]
+      })('overlay', {
+        src:'/assets/zerif/overlays/06.png'
+      });
+    });
+  </script>  
+</body>
+</html>
