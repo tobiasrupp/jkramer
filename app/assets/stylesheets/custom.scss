@@ -10,7 +10,10 @@ $primary-color: lighten(gray, 40%) !default;
   padding-top: 150px;
 }
 .feedback-box .client {
-  margin-top: 10px;
-  height: 150px;
+  // margin-top: 0px;
+  min-height: 150px;
   position: relative;
+}
+.client-image img {
+  width: 71px;
 }
