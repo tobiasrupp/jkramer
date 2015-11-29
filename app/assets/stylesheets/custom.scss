@@ -9,3 +9,8 @@ $primary-color: lighten(gray, 40%) !default;
   padding-bottom: 10px;
   padding-top: 150px;
 }
+.feedback-box .client {
+  margin-top: 10px;
+  height: 150px;
+  position: relative;
+}
