@@ -416,7 +416,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
-  fog (= 1.35.0)
+  fog
   jbuilder (~> 2.0)
   jquery-rails
   pg
