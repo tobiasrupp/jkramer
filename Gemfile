@@ -11,8 +11,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
-  gem 'fog', '1.35.0'
-  gem 'net-ssh'
+  gem 'dragonfly-s3_data_store'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
