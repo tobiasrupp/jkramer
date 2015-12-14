@@ -11,7 +11,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
-  gem 'fog'
+  gem 'fog', '~> 1.36.0'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
